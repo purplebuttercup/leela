@@ -14,12 +14,15 @@ class Main {
         //final page content with tokens and layout_tokens
         let pageContent = [];
         //decide if navbar present
-        if (self.randomGenerator.decideIfLayoutTokenPresent())
+        if (self.randomGenerator.decideIfLayoutTokenPresent([{ name: 0, weight: 0.3 }, { name: 1, weight: 0.7 }]) == 1)
             pageContent.push(self.contentService.addTokensToNavbar());
+        //decide if navigation present
+        if (self.randomGenerator.decideIfLayoutTokenPresent([{ name: 0, weight: 0.6 }, { name: 1, weight: 0.4 }]) == 1)
+            pageContent.push(self.contentService.addTokensToNavigation());
         //add content
         pageContent.push(self.contentService.addTokensToContent());
         //decide if footer present
-        if (self.randomGenerator.decideIfLayoutTokenPresent())
+        if (self.randomGenerator.decideIfLayoutTokenPresent([{ name: 0, weight: 0.3 }, { name: 1, weight: 0.7 }]) == 1)
             pageContent.push(self.contentService.addTokensToFooter());
         return pageContent.join('');
     }

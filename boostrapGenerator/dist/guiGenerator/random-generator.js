@@ -11,8 +11,7 @@ class RandomGenerator {
         }
         return tokens[lastIndex].name;
     }
-    decideIfLayoutTokenPresent() {
-        let numbers = [{ name: 0, weight: 0.3 }, { name: 1, weight: 0.7 }];
+    decideIfLayoutTokenPresent(numbers) {
         var num = Math.random(), s = 0, lastIndex = numbers.length - 1;
         for (var i = 0; i < lastIndex; ++i) {
             s += numbers[i].weight;

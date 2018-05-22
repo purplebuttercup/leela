@@ -1,11 +1,160 @@
-.navbar .row{
-	width: 100%;
+
+
+.container {
+    max-width: 100%;
 }
 
 
+/*Navbar*/
+.navbar {
+	background-color: #f9f9f9;
+	border: 2px solid black;
+}
+.navbar .row{
+	width: 100%;
+}
+.navbar .row .col{
+	display: inline-flex;
+}
+.nav-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar .col:nth-child(3) {
+    justify-content: flex-end;
+}
+.navbar .col:nth-child(2) {
+	justify-content: center;
+}
+
+/*Navigation*/
+.leela-nav {
+	background-color: #d2d2d2;
+	border: 1px solid #000;
+}
+.nav .row{
+	width: 100%;
+}
+.nav .row .col{
+	display: inline-flex;
+}
+
+/*Navbar Brand*/
+.navbar-brand{
+	font-weight: bold;
+}    
+
+/*Navbar Logo*/
+.navbar-logo img{
+	height: 50px;
+	width: 50px;
+}
+
+/*Button*/
+.btn-primary {
+    color: #000;
+    background-color: #ddd;
+    border-color: #ddd;
+    border-radius: 0;
+}
+
+/*Breadcrumb*/
+.breadcrumb {
+	background-color: transparent;
+}
+
+/*Checkbox*/
+.leela input[type=checkbox], input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0;
+    border: 3px solid #000;
+    outline: 0;
+    font-size: 17px;
+    vertical-align: middle;
+    box-shadow: 0 0 0 rgba(0,0,0,.2);
+    margin-right: 5px;
+    margin-top: 0;
+	margin-left: -28px;
+}
+
+/*Dropdown*/
+.dropdown .btn-secondary{
+    color: #000;
+    background-color: #ddd;
+    border-color: #ddd;
+    border-radius: 0;
+}
+
+/*Footer*/
+.leela-footer {
+	background-color: #9a9a9a;
+	border: 2px solid black;
+}
+.leela-footer .col:nth-child(2){
+    text-align: right;
+}
+
 /*Input*/
-input {
+.input-group .form-control {
 	border-radius: 0;
 	border-color: black;
 	border-width: 3px;
+}
+
+/*Link*/
+a {
+	color: #000;
+}
+
+/*Radio*/
+.leela input[type=radio] {
+	
+    -webkit-appearance: none;
+    position: relative;
+    background-color: #fff;
+    outline: 0;
+    font-size: 14px;
+    margin-top: 0;
+	top: -1px;    
+	content: '';
+	display: inline-block;    
+	width: 16px;
+    height: 16px;
+    vertical-align: -0.25em;
+    border-radius: 1em;
+    border: 0.125em solid #fff;
+    box-shadow: 0 0 0 3px #000;
+    margin-right: 0.75em;
+    transition: 0.5s ease all;
+}
+
+/*Tabs*/
+.nav-tabs .nav-link.active{
+	background-color: #d2d2d2;
+    border-color: #000 #000 transparent #000;
+    border-radius: 0;
+    border-width: 3px;
+}
+.nav-tabs {
+	border-bottom: 3px solid black;
+}
+.nav-tabs .nav-item {
+	margin-bottom: -3px;
+}
+
+/*ThirdParty*/
+.leela-thirdParty{
+	display: inline-flex;
+}
+.leela-thirdParty img{
+	height: 24px;
+    width: 100px;
 }

@@ -100,10 +100,6 @@ export class TokensData {
 			content: '',
 			canContain: [
 				{
-					name:'breadcrumb',
-					weight: 0.1
-				},
-				{
 					name: 'button', 
 					weight: 0.3
 				},
@@ -124,10 +120,6 @@ export class TokensData {
 					weight: 0.1
 				},
 				{
-					name: 'tabs',
-					weight: 0.025
-				},
-				{
 					name: 'text',
 					weight: 0.15
 				}
@@ -144,8 +136,8 @@ export class TokensData {
 				},
 				{
 					name: 'navbarLogo',
-					weight: 0.1
-				},
+					weight: 0.1 
+				},  
 				{
 					name: 'navbarLink',
 					weight: 0.4
@@ -154,6 +146,21 @@ export class TokensData {
 					name: 'navbarDropdown',
 					weight: 0.4
 				}
+			]
+		},
+		{
+			name: 'navigation',
+			location: 'layoutTokens/navigation.html',
+			content: '',
+			canContain: [
+				{
+					name:'breadcrumb',
+					weight: 0.5
+				},
+				{
+					name: 'tabs',
+					weight: 0.5
+				},
 			]
 		},
 		{

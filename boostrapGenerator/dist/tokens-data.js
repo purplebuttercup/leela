@@ -99,10 +99,6 @@ class TokensData {
                 content: '',
                 canContain: [
                     {
-                        name: 'breadcrumb',
-                        weight: 0.1
-                    },
-                    {
                         name: 'button',
                         weight: 0.3
                     },
@@ -121,10 +117,6 @@ class TokensData {
                     {
                         name: 'radio',
                         weight: 0.1
-                    },
-                    {
-                        name: 'tabs',
-                        weight: 0.025
                     },
                     {
                         name: 'text',
@@ -153,6 +145,21 @@ class TokensData {
                         name: 'navbarDropdown',
                         weight: 0.4
                     }
+                ]
+            },
+            {
+                name: 'navigation',
+                location: 'layoutTokens/navigation.html',
+                content: '',
+                canContain: [
+                    {
+                        name: 'breadcrumb',
+                        weight: 0.5
+                    },
+                    {
+                        name: 'tabs',
+                        weight: 0.5
+                    },
                 ]
             },
             {

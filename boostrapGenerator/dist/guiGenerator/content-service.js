@@ -28,16 +28,12 @@ class ContentService {
         let tokenInLayout = 'content[';
         for (let i = 0; i < countToken; i++)
             elementsToken.push(self.randomGenerator.getRandomToken(tokensList));
-        //--- BREADCRUMB ---//
-        elementsToken = self.assureUniqueness(elementsToken, 'breadcrumb');
-        //--- TABS ---//
-        elementsToken = self.assureUniqueness(elementsToken, 'tabs');
         let eachRowElements = self.randomGenerator.generateRandomNoTokensInColumn(elementsToken.length, rows);
-        //each row has 3 columns with random no. of tokens
+        //each row has 2 columns with random no. of tokens
         let elementsTokenIdx = 0;
         eachRowElements.forEach(rowElements => {
             tokenInLayout = tokenInLayout + '<';
-            let eachColumnElements = self.randomGenerator.generateRandomNoTokensInColumn(rowElements, 3);
+            let eachColumnElements = self.randomGenerator.generateRandomNoTokensInColumn(rowElements, 2);
             eachColumnElements.forEach(columnElements => {
                 tokenInLayout = tokenInLayout + '{';
                 for (let i = 0; i < columnElements; i++) {
@@ -55,8 +51,8 @@ class ContentService {
     }
     addTokensToNavbar() {
         let self = this;
-        //create between 1 - 6 token elements
-        let countToken = Math.floor(Math.random() * 8) + 1;
+        //create between 1 - 5 token elements
+        let countToken = Math.floor(Math.random() * 5) + 1;
         let tokensList = self.tokensData.layout_tokens.filter(tk => tk.name == 'navbar')[0].canContain;
         let elementsToken = [];
         let tokenInLayout = 'navbar[';
@@ -84,6 +80,17 @@ class ContentService {
         tokenInLayout = tokenInLayout + '>';
         return tokenInLayout + ']';
     }
+    addTokensToNavigation() {
+        let self = this;
+        //create 1 element
+        let tokensList = self.tokensData.layout_tokens.filter(tk => tk.name == 'navigation')[0].canContain;
+        let elementsToken = [];
+        let tokenInLayout = 'navigation[';
+        elementsToken.push(self.randomGenerator.getRandomToken(tokensList));
+        //each navigation has 1 row with either 1 breadcrumb or 1 tab
+        tokenInLayout = tokenInLayout + '<' + elementsToken[0] + '>';
+        return tokenInLayout + ']';
+    }
     addTokensToFooter() {
         let self = this;
         //create between 1 - 5 token elements
@@ -100,11 +107,11 @@ class ContentService {
         //--- COPYRIGHT ---//
         elementsToken = self.assureUniqueness(elementsToken, 'copyright');
         let eachRowElements = self.randomGenerator.generateRandomNoTokensInColumn(elementsToken.length, rows);
-        //each row has 3 columns with random no. of tokens
+        //each row has 2 columns with random no. of tokens
         let elementsTokenIdx = 0;
         eachRowElements.forEach(rowElements => {
             tokenInLayout = tokenInLayout + '<';
-            let eachColumnElements = self.randomGenerator.generateRandomNoTokensInColumn(rowElements, 3);
+            let eachColumnElements = self.randomGenerator.generateRandomNoTokensInColumn(rowElements, 2);
             eachColumnElements.forEach(columnElements => {
                 tokenInLayout = tokenInLayout + '{';
                 for (let i = 0; i < columnElements; i++) {

@@ -1,5 +1,5 @@
 export class RandomGenerator {
-	getRandomToken(tokens: any) {
+	getRandomToken(tokens: any) { 
 		var num = Math.random(),
 		s = 0,
 		lastIndex = tokens.length - 1;
@@ -14,8 +14,7 @@ export class RandomGenerator {
 		return tokens[lastIndex].name;
 	}
 	
-	decideIfLayoutTokenPresent () {
-		let numbers = [{name: 0, weight: 0.3}, {name: 1, weight:0.7}]
+	decideIfLayoutTokenPresent (numbers) {
 		var num = Math.random(),
 			s = 0,
 			lastIndex = numbers.length - 1;
@@ -29,7 +28,7 @@ export class RandomGenerator {
 	
 		return numbers[lastIndex].name;
 	};
-
+ 
 	randomBetween(min, max) {
 		return Math.floor(Math.random()*(max-min+1)+min);
 	};
