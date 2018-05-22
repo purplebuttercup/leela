@@ -1,0 +1,23 @@
+# Editors
+.project
+*.bak
+.settings
+.*.md.html
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directory
+node_modules
+
+# Documentation (all over)
+*/docs/*
+
+# Debug
+*.log
+*.log.*
+
+# Uploaded Images
+*/scrnCapture
+*/guis/*
+*/htmls/*
