@@ -1,0 +1,19 @@
+{
+  "name": "screencapture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "nightmare": "^3.0.1",
+    "nightmare-screenshot": "^1.0.0",
+    "nightmare-screenshot-selector": "^1.0.2",
+    "phantomjs-prebuilt": "^2.1.16",
+    "webpage": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matei Alexandra",
+  "license": "MIT"
+}

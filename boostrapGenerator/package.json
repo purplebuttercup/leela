@@ -8,8 +8,8 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Matei Alexandra",
+  "license": "MIT",
   "devDependencies": {
     "@types/jquery": "^3.3.1",
     "@types/node": "^10.0.6",
