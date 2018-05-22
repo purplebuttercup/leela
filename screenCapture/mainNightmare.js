@@ -43,7 +43,7 @@ for (pageindex; pageindex< htmlFiles.length; pageindex++){
   var nightmare = Nightmare({ show: false })
   nightmare
   .useragent('Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36')
-  .viewport(1200, 1800)
+  .viewport(600, 600)
   .wait()
   .goto('file:///'+htmlFiles[pageindex])
   .wait()

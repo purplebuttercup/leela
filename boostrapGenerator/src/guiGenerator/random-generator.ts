@@ -30,7 +30,7 @@ export class RandomGenerator {
 	};
  
 	randomBetween(min, max) {
-		return Math.floor(Math.random()*(max-min+1)+min);
+		return Math.floor(Math.random()*(max-min+1))+min;
 	};
 
 	generateRandomNoTokensInColumn(max, thecount) {
@@ -39,7 +39,7 @@ export class RandomGenerator {
 		let currsum = 0;
 		if (max > 0){
 			for(let i=0; i<thecount-1; i++) {
-			r[i] = self.randomBetween(0, max-(thecount-i-1)-currsum);
+			r[i] = self.randomBetween(1, max-(thecount-i-1)-currsum);
 			currsum += r[i];
 			}
 			r[thecount-1] = max - currsum;
