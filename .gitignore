@@ -19,5 +19,10 @@ node_modules
 
 # Uploaded Images
 */scrnCapture
+*/scrnCapture_run*
 */guis/*
 */htmls/*
+*/guis_run*/*
+*/htmls_run*/*
+*/images
+*/imagesProcessed

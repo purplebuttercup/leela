@@ -33,9 +33,9 @@ function buildHtml(pageContent) {
 } 
 
 //write noFiles files
-let noFiles = 1000;  
+let noFiles = 17;  
 for (let index=0; index<noFiles; index++) {
-  let main = new Main();
+  let main = new Main(); 
   let pageContent = main.createRandomPage(); 
 
   let fileNameGui = path.join(__dirname, '../guis/page' + index + '.gui');
@@ -43,14 +43,14 @@ for (let index=0; index<noFiles; index++) {
 
   fs.writeFile(fileNameGui, buildGui(pageContent), function(err) {
     if(err) {
-        return console.log(err);
+        return console.log(err); 
     }
     console.log("The file page"+ index + ".gui was saved!");
   }); 
   fs.writeFile(fileNameHtml, buildHtml(pageContent), function(err) {
-    if(err) {
+    if(err) { 
         return console.log(err);
-    }
+    } 
     console.log("The file page"+ index + ".html was saved!");
   }); 
 }

@@ -4,6 +4,10 @@
     max-width: 100%;
 }
 
+.row {
+    min-height: 30px;
+}
+
 
 /*Navbar*/
 .navbar {
