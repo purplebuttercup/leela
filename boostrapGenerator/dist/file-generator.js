@@ -28,7 +28,7 @@ function buildHtml(pageContent) {
         '</html>';
 }
 //write noFiles files
-let noFiles = 17;
+let noFiles = 1;
 for (let index = 0; index < noFiles; index++) {
     let main = new main_1.Main();
     let pageContent = main.createRandomPage();

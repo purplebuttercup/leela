@@ -25,4 +25,5 @@ node_modules
 */guis_run*/*
 */htmls_run*/*
 */images
-*/imagesProcessed
+*/imagesProcessed*
+*/imagesProcessed_run*

@@ -4,7 +4,7 @@ var path = require('path');
 
 var inputPath = 'image*.png';
 var outputPath = 'imagesProcessed*.png';
-var width = 200; // output width in pixels
+var width = 50; // output width in pixels
 
 
 var imgFiles = new Array();
@@ -20,7 +20,7 @@ for(var i = 0; i< curdir.length; i++)
     var stat = fs.statSync(fullpath);
     if (stat.isFile())
     {
-        // check that file is html
+        // check that file is png
         if(fullpath.indexOf('.png') != -1)
         {
             // show full path of file
